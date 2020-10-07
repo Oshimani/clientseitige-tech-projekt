@@ -1,28 +1,85 @@
+#repos-anchor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
 .repo-card {
-    margin: 1em 2em;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
     box-shadow: 10px 5px 5px #202020;
-    padding: 1em 2em;
+    /* TOP RIGHT BOTTOM LEFT */
+    padding: 2.7em 2em 0.5em 2em;
     background-color: var(--background-secondary);
     border-radius: 0.4em;
-    max-width: 350px;
+    /* max-width: 33%; */
+    flex:1;
+    flex-basis: 25%;
+}
+.repo-card .spacer{
+    flex-grow: 1;
 }
 
 .repo-card .number {
 
     position: absolute;
     top: -0.5em;
-    left: -0.5em;
+    left: 0.5em;
 
     width: 1.5em;
     height: 1.5em;
     text-align: center;
     line-height: 1.5em;
-
-
     border-radius: 100%;
 
     background-color: var(--primary);
     font-size: 2em;
+}
 
+.repo-card header .language{
+    position: absolute;
+    top: -0.5em;
+    right: 1em;
+
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    background-color: var(--primary);
+    color: var(--font);
+}
+
+.repo-card header .title {
+    font-size: 1.8em;
+}
+
+.repo-card .content {
+    padding-bottom: 1em;
+}
+.repo-card .metadata span{
+    font-weight: bold;
+}
+
+.repo-card footer {
+    border-top: var(--primary) solid 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.repo-card footer a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5em 1em;
+}
+.repo-card footer a:first-of-type{
+    padding-left: 0;
+}
+.repo-card footer a:last-of-type{
+    padding-right: 0;
+}
+
+.repo-card footer a:hover {
+    text-decoration: underline;
 }

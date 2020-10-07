@@ -5,6 +5,7 @@
     --background: #383838;
     --background-secondary: #414141;
     --font: #fdfdfd;
+    --white: #fdfdfd;
 
     /* ROOT STYLE */
     background-color: var(--background);
