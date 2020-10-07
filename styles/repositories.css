@@ -1,0 +1,28 @@
+.repo-card {
+    margin: 1em 2em;
+    position: relative;
+    box-shadow: 10px 5px 5px #202020;
+    padding: 1em 2em;
+    background-color: var(--background-secondary);
+    border-radius: 0.4em;
+    max-width: 350px;
+}
+
+.repo-card .number {
+
+    position: absolute;
+    top: -0.5em;
+    left: -0.5em;
+
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+
+
+    border-radius: 100%;
+
+    background-color: var(--primary);
+    font-size: 2em;
+
+}
