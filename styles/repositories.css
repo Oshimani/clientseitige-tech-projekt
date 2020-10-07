@@ -2,21 +2,24 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    justify-content: center;
 }
 
 .repo-card {
     position: relative;
     display: flex;
     flex-direction: column;
+
     margin-top: 1em;
     box-shadow: 10px 5px 5px #202020;
     /* TOP RIGHT BOTTOM LEFT */
     padding: 2.7em 2em 0.5em 2em;
     background-color: var(--background-secondary);
     border-radius: 0.4em;
-    /* max-width: 33%; */
-    flex:1;
-    flex-basis: 25%;
+    
+    width: 320px;
+    /* flex:1; */
+    /* flex-basis: 25%; */
 }
 .repo-card .spacer{
     flex-grow: 1;
@@ -55,6 +58,7 @@
 
 .repo-card .content {
     padding-bottom: 1em;
+    overflow-wrap: break-word;
 }
 .repo-card .metadata span{
     font-weight: bold;

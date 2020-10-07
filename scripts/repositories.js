@@ -45,13 +45,15 @@ const renderRepo = (repo, index) => {
 
 const renderRepos = (repos) => {
 
-    //sort repos
-    // todo
+    // sort repos
+    // sorted by backend
 
     // render each repo
     document.getElementById('repos-anchor').innerHTML = repos.map((repo, index) => {
         return renderRepo(repo, index)
-    }).join("")
+    })
+    // remove "," from stringified array
+    .join("")
 }
 
 const loadRepos = () => {
