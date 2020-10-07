@@ -18,8 +18,9 @@
     border-radius: 0.4em;
     
     width: 320px;
-    /* flex:1; */
-    /* flex-basis: 25%; */
+
+    opacity: 0;
+    transition: opacity 300ms linear;
 }
 .repo-card .spacer{
     flex-grow: 1;

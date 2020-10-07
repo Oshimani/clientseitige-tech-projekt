@@ -49,11 +49,23 @@ const renderRepos = (repos) => {
     // sorted by backend
 
     // render each repo
-    document.getElementById('repos-anchor').innerHTML = repos.map((repo, index) => {
-        return renderRepo(repo, index)
-    })
-    // remove "," from stringified array
-    .join("")
+    document.getElementById('repos-anchor').innerHTML =
+        repos
+            .map((repo, index) => {
+                return renderRepo(repo, index)
+            })
+            // remove "," from stringified array
+            .join("")
+
+    // fade in
+    const reposElements = document.getElementsByClassName("repo-card")
+
+    for (let index = 0; index < reposElements.length; index++) {
+        // delay and fade in
+        setTimeout(() => {
+            reposElements[index].style = "opacity:100"
+        }, index * 80);
+    }
 }
 
 const loadRepos = () => {
