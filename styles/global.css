@@ -5,6 +5,7 @@
     --background: #383838;
     --background-secondary: #414141;
     --font: #fdfdfd;
+    --font-error:#c30505;
     --white: #fdfdfd;
 
     /* ROOT STYLE */
@@ -44,6 +45,22 @@
     /* FADE IN */
     opacity: 0;
     transition: opacity 300ms linear;
+    text-align: center;
+}
+#content h1{
+    border-bottom: 2px solid var(--primary);
+}
+
+#content a {
+    color: var(--primary);
+}
+
+#content a:hover{
+    animation: hue-rotation 1s infinite;
+}
+
+#content>section{
+    margin-bottom: 6em;
 }
 
 .layout {

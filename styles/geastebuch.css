@@ -1,0 +1,19 @@
+#gaestebuch-form {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#gaestebuch-form input,
+#gaestebuch-form textarea {
+    /* min-width: 600px; */
+    padding: 0.5em 1em;
+}
+
+#gaestebuch-form label+input:focus {
+    color: var(--primary);
+}
+
+#gaestebuch-form label span {
+    color: var(--font-error);
+    margin-left: 0.2em;
+}

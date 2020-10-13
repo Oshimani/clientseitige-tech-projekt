@@ -9,6 +9,9 @@
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="/styles/global.css">
 
+    <link rel="stylesheet" href="/styles/hobbies-table.css">
+    <link rel="stylesheet" href="/styles/geastebuch.css">
+
     <!-- LAYOUT SCRIPT -->
     <script src="/scripts/layout.js"></script>
 </head>
@@ -19,14 +22,149 @@
 
     <div class="layout">
         <!-- CONTENT -->
-        <div id="content">
-            <div>
-                Hello World!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae autem provident molestiae assumenda
-                incidunt. Dolore minima obcaecati voluptatem, ipsam, fuga ipsum aliquid ad iste quaerat nostrum,
-                voluptate impedit voluptates explicabo!
-            </div>
-        </div>
+        <main id="content">
+            <!-- CONTENT -->
+
+            <!-- INTO TEXT -->
+            <section>
+                <h1>Hallo und herzlich willkommen auf meiner Website!</h1>
+                <p>
+                    Mein Name ist <strong>Jannick Jungbluth</strong>, ich bin <strong>26</strong> Jahre alt und wohne in
+                    <strong>Gielert im Hunsrück</strong>. Ich studiere
+                    Wirtschaftsinformatik im 3. Semester an der <a target="_blank"
+                        href="https://hochschule-trier.de">Hochschule Trier.</a>
+                </p>
+            </section>
+
+            <!-- IMAGE -->
+            <section>
+                <h1>Wir sind im Internet, also hier ein Bild von meiner Katze!</h1>
+                <img src="./assets/pepps.jpg" width="600px" alt="Meine Katze Pepps">
+            </section>
+
+            <!-- MORE INFO ABOUT ME -->
+            <section>
+                <h1>
+                    Meine Hobbies
+                </h1>
+                <table id="hobbies-table" border="1">
+                    <thead>
+                        <td>
+                            <!-- ICON -->
+                        </td>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Spaßfaktor
+                        </td>
+                        <td>
+                            Zeitaufwand
+                        </td>
+                        <td>
+                            Ressourcen
+                        </td>
+                    </thead>
+                    <tbody>
+
+                        <!-- MTB -->
+                        <tr>
+                            <td>
+                                🚲
+                            </td>
+                            <td>
+                                Mountainbiking
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐⭐
+                            </td>
+                            <td>
+                                ⭐⭐⭐
+                            </td>
+                            <td>
+                                <a href="https://www.youtube.com/channel/UC3DFdy_qc-cqgKCyQTHLGzA" target="_blank"
+                                    rel="noopener noreferrer">Youtube: BKXC</a>
+                            </td>
+                        </tr>
+
+                        <!-- PROGRAMMIERUNG -->
+                        <tr>
+                            <td>
+                                🖥️
+                            </td>
+                            <td>
+                                Programmieren
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐
+                            </td>
+                            <td>
+                                <a href="https://github.com/Oshimani" target="_blank" rel="noopener noreferrer">Mein
+                                    Github</a>
+                            </td>
+                        </tr>
+
+                        <!-- GITARRE SPIELEN -->
+                        <tr>
+                            <td>
+                                🎸
+                            </td>
+                            <td>
+                                Gitarre spielen
+                            </td>
+                            <td>
+                                ⭐⭐⭐
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐⭐
+                            </td>
+                            <td>
+                                <a href="https://www.ultimate-guitar.com/" target="_blank"
+                                    rel="noopener noreferrer">Utlimate Guitar.com (Noten für Gitarre)</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- GÄSTEBUCH -->
+            <section>
+                <h1>Mein Gästebuch</h1>
+                <form id="gaestebuch-form" action="/Phase1HTML/geastebuch.html" method="get">
+
+                    <!-- NAME -->
+                    <label for="name">Ihr Name:<span>*</span></label>
+                    <input required type="text" name="name" id="name">
+
+                    <!-- Mail -->
+                    <label for="mail">Ihre Mail <i>(für Rückfragen)</i>:<span>*</span></label>
+                    <input required type="email" name="mail" id="mail">
+
+                    <!-- TEXT -->
+                    <label for="text">Ihre Nachricht an mich:<span>*</span></label>
+                    <textarea required rows="5" type="text" name="text" id="text"></textarea>
+
+                    <!-- WERTUNG -->
+                    <label for="wertung">Gefällt Ihnen meine Webseite?</label>
+                    <div>
+                        <label for="ja">👍
+                            <input type="radio" name="wertung" id="ja">
+                        </label>
+                        <label for="nein">👎
+                            <input type="radio" name="wertung" id="nein">
+                        </label>
+                    </div>
+
+                    <i>(* = benötigte Angabe)</i>
+
+                    <button type="submit">Absenden</button>
+                </form>
+            </section>
+        </main>
 
         <!-- FOOTER -->
         <footer>
