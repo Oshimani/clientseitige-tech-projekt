@@ -9,11 +9,38 @@
     padding: 0.5em 1em;
 }
 
-#gaestebuch-form label+input:focus {
-    color: var(--primary);
+#gaestebuch-form {
+    gap: 1em;
+}
+
+.wertung-container {
+    font-size: 2.5em;
 }
 
 #gaestebuch-form label span {
     color: var(--font-error);
     margin-left: 0.2em;
+}
+
+#gaestebuch-form input,
+#gaestebuch-form textarea {
+    /* background-color: var(--primary); */
+    /* color: #fdfdfd; */
+    /* font-size: 1.2em; */
+}
+
+#gaestebuch-form button {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: #fdfdfd;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+}
+
+#gaestebuch-form button:hover {
+    background-color: var(--primary-hover);
+}
+
+#gaestebuch-form button:active {
+    background-color: var(--primary-active);
 }

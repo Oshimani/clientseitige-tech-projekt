@@ -2,10 +2,11 @@
     /* COLORS */
     --primary: #00d48a;
     --primary-hover: #1ad996;
+    --primary-active: #16be84;
     --background: #383838;
     --background-secondary: #414141;
     --font: #fdfdfd;
-    --font-error:#c30505;
+    --font-error: #c30505;
     --white: #fdfdfd;
 
     /* ROOT STYLE */
@@ -47,7 +48,8 @@
     transition: opacity 300ms linear;
     text-align: center;
 }
-#content h1{
+
+#content h1 {
     border-bottom: 2px solid var(--primary);
 }
 
@@ -55,11 +57,11 @@
     color: var(--primary);
 }
 
-#content a:hover{
+#content a:hover {
     animation: hue-rotation 1s infinite;
 }
 
-#content>section{
+#content>section {
     margin-bottom: 6em;
 }
 
@@ -70,9 +72,13 @@
     padding: 0 1em;
 }
 
+.image-full {
+    width: 100%;
+}
+
 @media only screen and (min-width: 1200px) {
     .layout {
-    max-width: 1200px;
+        max-width: 1200px;
     }
 }
 
