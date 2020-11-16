@@ -1,3 +1,4 @@
+/* ALL CELLS */
 #hobbies-table{
     width: 100%;
 }
@@ -6,6 +7,12 @@
     padding: 0.5em 1em;
 }
 
+/* HEAD */
+#hobbies-table thead tr td{
+    font-weight: bold;
+}
+
+/* BODY */
 #hobbies-table tbody td:nth-child(2){
     text-transform: uppercase;
 }
@@ -13,4 +20,12 @@
 #hobbies-table tbody td:nth-child(3),
 #hobbies-table tbody td:nth-child(4){
     text-align: left;
+}
+
+#hobbies-table tbody tr:hover td:not(:nth-child(5)){
+    background-color: var(--primary);
+}
+
+#hobbies-table tbody tr td {
+    transition: background-color linear 150ms;
 }

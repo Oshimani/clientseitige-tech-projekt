@@ -7,12 +7,32 @@ const insertNavigation = () => {
 
         <!-- NAVIGATION -->
         <nav class="glob-navigation">
+            
             <a href="/" class="nav-item">
                 Home
             </a>
+
+            <div href="/hobbies.html" class="nav-item">
+                Hobbies
+                <ul class="nav-dropdown">
+                    <li>
+                        <a>Mountainbike</a>
+                    </li>
+
+                    <li>
+                        <a>Programmieren</a>
+                    </li>
+
+                    <li>
+                        <a>Gitarre</a>
+                    </li>
+                </ul>
+            </div>
+
             <a href="/repositories.html" class="nav-item">
                 Repositories
             </a>
+
         </nav>
 
         <hr class="glob-divider">
@@ -21,10 +41,10 @@ const insertNavigation = () => {
 }
 
 const showContent = () => {
-    document.getElementById('content').style ="opacity:100"
+    document.getElementById('content').style = "opacity:100"
 }
 
-const onLoad = ()=>{
+const onLoad = () => {
     insertNavigation()
     showContent()
 }
