@@ -13,11 +13,22 @@
     gap: 1em;
 }
 
-.wertung-container {
+#gaestebuch-form .wertung-container {
     font-size: 2.5em;
 }
 
-#gaestebuch-form label span {
+#gaestebuch-form .wertung-container label {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform linear 150ms;
+}
+
+#gaestebuch-form .wertung-container label:hover {
+    transform: scale(1.2);
+}
+
+#gaestebuch-form label span,
+#gaestebuch-form i span {
     color: var(--font-error);
     margin-left: 0.2em;
 }

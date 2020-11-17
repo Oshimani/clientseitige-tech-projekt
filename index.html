@@ -9,8 +9,9 @@
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="/styles/global.css">
 
+    <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/hobbies-table.css">
-    <link rel="stylesheet" href="/styles/geastebuch.css">
+    <link rel="stylesheet" href="/styles/geastebuch-form.css">
 
     <!-- LAYOUT SCRIPT -->
     <script src="/scripts/layout.js"></script>
@@ -36,14 +37,37 @@
                 </p>
             </section>
 
-            <!-- IMAGE -->
+            <!-- KATZE -->
             <section>
-                <h1>Wir sind im Internet, also hier ein Bild und ein Video von meiner Katze!</h1>
-                <img class="rounded-border-media mb" src="./assets/pepps.jpg" width="600px" alt="Meine Katze Pepps">
+                <h1>Wir sind im Internet, also hier ein paar Bilder und ein Video von meiner Katze!</h1>
 
-                <video class="rounded-border-media" controls width="600px" alt="Pepps gefällt die heutige Schlagzeile überhaupt nicht.">
-                    <source src="./assets/PeppsVsVolksfreund.mp4" type="video/mp4">
-                </video>
+                <div class="cat-flex-container">
+                    <!-- BILD -->
+                    <div class="img-container media media-sm">
+                        <div class="img-background" style="background: url(/assets/pepps.jpg)"></div>
+                        <img src="./assets/pepps.jpg" alt="Meine Katze Pepps">
+                    </div>
+
+                    <!-- BILD -->
+                    <div class="img-container media media-sm">
+                        <div class="img-background" style="background: url(/assets/peppsImKleiderschrank.jpeg)"></div>
+                        <img src="./assets/peppsImKleiderschrank.jpeg" alt="Meine Katze Pepps">
+                    </div>
+
+                    <!-- BILD -->
+                    <div class="img-container media media-tall">
+                        <div class="img-background" style="background: url(/assets/peppsHochkant.jpg)"></div>
+                        <img src="./assets/peppsHochkant.jpg" alt="Meine Katze Pepps">
+                    </div>
+
+                    <!-- VIDEO -->
+                    <div class="img-container media media-sm">
+                        <div class="img-background" style="background: url(/assets/peppsVideo.png)"></div>
+                        <video controls alt="Pepps gefällt die heutige Schlagzeile überhaupt nicht.">
+                            <source src="./assets/PeppsVsVolksfreund.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
             </section>
 
             <!-- MORE INFO ABOUT ME -->
@@ -163,7 +187,7 @@
                         </label>
                     </div>
 
-                    <i>(* = benötigte Angabe)</i>
+                    <i>(<span>*</span> = benötigte Angabe)</i>
 
                     <button type="submit">Absenden</button>
                 </form>

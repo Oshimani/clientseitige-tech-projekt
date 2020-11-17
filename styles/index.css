@@ -1,0 +1,67 @@
+.cat-flex-container {
+    display: grid;
+    grid-template-areas:
+        "a d"
+        "b d"
+        "c d";
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+.cat-flex-container .img-container {
+    position: relative;
+
+    overflow: hidden;
+
+    /* ALIGN IMAGE CENTER */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cat-flex-container .img-container img,
+.cat-flex-container .img-container video {
+    width: auto;
+    max-width: 600px;
+    height: auto;
+}
+
+.cat-flex-container .img-container.media.media-sm {
+    grid-area: auto;
+}
+
+
+.cat-flex-container .img-container.media.media-tall {
+    grid-area: d;
+}
+
+.cat-flex-container .img-container .img-background {
+    position: absolute;
+    background: url(/assets/pepps.jpg);
+    background-position: center;
+    background-size: cover;
+
+    filter: blur(10px);
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .cat-flex-container {
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d";
+        grid-template-columns: 1fr;
+    }
+
+    .cat-flex-container .img-container{
+        flex-direction: row;
+    }
+}

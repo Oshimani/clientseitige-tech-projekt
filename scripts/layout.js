@@ -2,9 +2,12 @@
 const insertNavigation = () => {
     console.log("layouts.js");
     document.getElementById('header-anchor').innerHTML = `
+    <!-- HEADER CSS -->
+    <link rel="stylesheet" href="/styles/glob-navigation.css">
+    
     <!-- HEADER -->
-    <header class="golb-header">
-
+    <header class="glob-header">
+        
         <!-- NAVIGATION -->
         <nav class="glob-navigation">
             
