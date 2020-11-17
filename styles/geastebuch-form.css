@@ -40,6 +40,10 @@
     /* font-size: 1.2em; */
 }
 
+#gaestebuch-form textarea {
+    resize: vertical;
+}
+
 #gaestebuch-form button {
     cursor: pointer;
     background-color: var(--primary);
