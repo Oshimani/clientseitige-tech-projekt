@@ -1,6 +1,8 @@
 // INSERT NAVIGATION
 const insertNavigation = () => {
-    console.log("layouts.js");
+    console.log("layouts.js initialized")
+
+    // insert header
     document.getElementById('header-anchor').innerHTML = `
     <!-- HEADER CSS -->
     <link rel="stylesheet" href="/styles/glob-navigation.css">
@@ -15,19 +17,19 @@ const insertNavigation = () => {
                 Home
             </a>
 
-            <div href="/hobbies.html" class="nav-item">
+            <div  class="nav-item">
                 Hobbies
                 <ul class="nav-dropdown">
                     <li>
-                        <a>Mountainbike</a>
+                        <a href="/hobbies.html?type=mtb">Mountainbike</a>
                     </li>
 
                     <li>
-                        <a>Programmieren</a>
+                        <a href="/hobbies.html?type=prog">Programmieren</a>
                     </li>
 
                     <li>
-                        <a>Gitarre</a>
+                        <a href="/hobbies.html?type=guitar">Gitarre</a>
                     </li>
                 </ul>
             </div>

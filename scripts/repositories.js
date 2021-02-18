@@ -51,6 +51,7 @@ const renderRepos = (repos) => {
     // render each repo
     document.getElementById('repos-anchor').innerHTML =
         repos
+            // returns stringified array, separated by ","
             .map((repo, index) => {
                 return renderRepo(repo, index)
             })
@@ -69,7 +70,7 @@ const renderRepos = (repos) => {
 }
 
 const loadRepos = () => {
-    fetch('https://api.github.com/users/Oshimani/repos?sort=updated')
+    return (fetch('https://api.github.com/users/Oshimani/repos?sort=updated')
 
         // success
         .then(result => {
@@ -77,11 +78,16 @@ const loadRepos = () => {
             result.json()
                 .then(
                     repos => {
-                        console.log('Success fetching repos! Found: ', repos.length)
+                        console.log('Success fetching repos! Found: ', { repos, length: repos.length })
                         renderRepos(repos)
                     }
                 )
         })
 
-        .catch(error => console.error('Failed to fetch repos!', error))
+        // error
+        .catch(error => {
+            alert('Failed to fetch repos!')
+            console.error('Failed to fetch repos!', error)
+        })
+    )
 }
