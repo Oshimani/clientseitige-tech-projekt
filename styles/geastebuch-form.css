@@ -13,17 +13,17 @@
     gap: 1em;
 }
 
-#gaestebuch-form .wertung-container {
+#gaestebuch-form .rating-container {
     font-size: 2.5em;
 }
 
-#gaestebuch-form .wertung-container label {
+#gaestebuch-form .rating-container label {
     display: inline-block;
     cursor: pointer;
     transition: transform linear 150ms;
 }
 
-#gaestebuch-form .wertung-container label:hover {
+#gaestebuch-form .rating-container label:hover {
     transform: scale(1.2);
 }
 
@@ -50,6 +50,8 @@
     color: #fdfdfd;
     padding: 0.5em 1em;
     font-size: 1.2em;
+    border-radius: 2em;
+    border:none;
 }
 
 #gaestebuch-form button:hover {
