@@ -1,9 +1,16 @@
-// INSERT NAVIGATION
-const insertNavigation = () => {
-    console.log("layouts.js initialized")
+class LayoutController {
 
-    // insert header
-    document.getElementById('header-anchor').innerHTML = `
+    constructor() {
+        this.insertNavigation()
+        this.showContent()
+    }
+
+    // INSERT NAVIGATION
+    insertNavigation = () => {
+        console.log("layouts.js initialized")
+
+        // insert header
+        document.getElementById('header-anchor').innerHTML = `
     <!-- HEADER CSS -->
     <link rel="stylesheet" href="/styles/glob-navigation.css">
     
@@ -43,13 +50,13 @@ const insertNavigation = () => {
         <hr class="glob-divider">
     </header>
 `
+    }
+
+    showContent = () => {
+        document.getElementById('content').style = "opacity:100"
+    }
 }
 
-const showContent = () => {
-    document.getElementById('content').style = "opacity:100"
-}
-
-const onLoad = () => {
-    insertNavigation()
-    showContent()
+const initializeLayout = () => {
+    const layout = new LayoutController()
 }
