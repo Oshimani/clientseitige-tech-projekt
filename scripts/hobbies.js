@@ -23,7 +23,20 @@ class HobbiesController {
     }
 
     greet() {
-        document.getElementById('greeting-anchor').innerText = `Hello you are at ${this.type}`
+        document.getElementById('heading-anchor').innerText = `Hello you are at ${this.resolveDisplayName(this.type)}`
+    }
+
+    resolveDisplayName(type) {
+        switch (type) {
+            case "mtb":
+                return "Mountainbike"
+            case "guitar":
+                return "Gitarre"
+            case "prog":
+                return "Programmieren"
+            default:
+                throw "Failed to match type"
+        }
     }
 }
 

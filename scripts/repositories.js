@@ -1,14 +1,15 @@
-class Repository {
+function Repository(language, name, description, created_at, pushed_at, html_url) {
+    var language, name, description, created_at, pushed_at, html_url
 
-    constructor(language, name, description, created_at, html_url) {
-        this.language = language
-        this.name = name
-        this.description = description
-        this.created_at = created_at
-        this.html_url = html_url
-    }
+    // ctor
+    this.language = language
+    this.name = name
+    this.description = description
+    this.created_at = created_at
+    this.pushed_at = pushed_at
+    this.html_url = html_url
 
-    render = (index) => {
+    this.render = (index) => {
         return `
     <!-- REPO -->
     <div class="repo-card">
@@ -52,7 +53,6 @@ class Repository {
     </div>
     `
     }
-
 }
 
 class RepositoriesController {
@@ -69,6 +69,7 @@ class RepositoriesController {
                             repo.name,
                             repo.description,
                             repo.created_at,
+                            repo.pushed_at,
                             repo.html_url
                         )
                     })
