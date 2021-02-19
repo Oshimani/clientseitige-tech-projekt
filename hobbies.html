@@ -16,13 +16,25 @@
     <script src="/scripts/hobbies.js"></script>
 </head>
 
-<body onload="initializeLayout(); initializeHobbies()">
+<script>
+    // STORE CONTROLLER HERE
+    var hc
+</script>
+
+<body onload=" initializeLayout(); hc = initializeHobbies()">
     <!-- HEADER -->
     <div id="header-anchor"></div>
 
     <div class="layout">
         <main id="content">
-            <div id="heading-anchor"></div>
+            <section>
+                <h1 class="" id="heading-anchor"></h1>
+            </section>
+
+            <section>
+                <button class="button" onclick="hc.openWindow(hc.getImageUrl(hc.type), 1400, 1000, true)">Open resource
+                    in new window</button>
+            </section>
         </main>
     </div>
 </body>

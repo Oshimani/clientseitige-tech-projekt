@@ -38,9 +38,26 @@ class HobbiesController {
                 throw "Failed to match type"
         }
     }
+
+    getImageUrl(type) {
+        switch (type) {
+            case "mtb":
+                return "/assets/mtb.jpg"
+            case "guitar":
+                return "https://www.lagguitars.com/de_DE/produkte/westerngitarren-dreadnought-cutaway-gla-t270dce"
+            case "prog":
+                return "/repositories.html"
+            default:
+                throw "Failed to match type"
+        }
+    }
+
+    openWindow(url, width, height, resizable) {
+        window.open(url, 'My Image', `width=${width}px, height=${height}px, resizable=${resizable}`)
+    }
 }
 
 
 const initializeHobbies = () => {
-    const hc = new HobbiesController()
+    return new HobbiesController()
 }

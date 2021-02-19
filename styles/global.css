@@ -61,12 +61,36 @@
     width: 100%;
 }
 
+
+ /* BUTTON */
+.button {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: #fdfdfd;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    border-radius: 2em;
+    border:none;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+}
+
+.button:active {
+    background-color: var(--primary-active);
+}
+
+
+/* LAYOUT BREAKPOINT */
 @media only screen and (min-width: 1200px) {
     .layout {
         max-width: 1200px;
     }
 }
 
+
+/* ANIMATION FOR HREFS */
 @keyframes hue-rotation {
     0% {
         filter: hue-rotate(0deg);
