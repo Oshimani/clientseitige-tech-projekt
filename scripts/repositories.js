@@ -131,5 +131,5 @@ class RepositoriesController {
 }
 
 const initializeRepositories = () => {
-    const repos = new RepositoriesController()
+    return new RepositoriesController()
 }

@@ -58,5 +58,5 @@ class LayoutController {
 }
 
 const initializeLayout = () => {
-    const layout = new LayoutController()
+    return new LayoutController()
 }

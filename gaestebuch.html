@@ -14,9 +14,10 @@
 
     <!-- LAYOUT SCRIPT -->
     <script src="/scripts/layout.js"></script>
+    <script src="/scripts/gaestebuch.js"></script>
 </head>
 
-<body onload="initializeLayout()">
+<body onload="initializeLayout(); initializeGaestebuchController()">
     <!-- HEADER -->
     <div id="header-anchor"></div>
 
@@ -33,9 +34,9 @@
                 <img class="image-full" src="./assets/HochwaldImWinter.jpg" alt="Blick über den Hochwald im Winter">
             </section>
 
-
-
-
+            <section>
+                <div id="feedback-anchor"></div>
+            </section>
 
             <!-- FOOTER -->
             <footer>

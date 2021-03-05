@@ -31,6 +31,11 @@ const onSubmit = (event) => {
     console.log(event);
     const form = document["gaestebuch-form"]
 
+    // url encode all entries
+    for (const element of form.elements) {
+        // element.value = encodeURIComponent(element.value)
+    }
+
     if (form.rating.value) {
         // cast rating to boolean
         isUpvoted = form.rating.value.toBoolean()
