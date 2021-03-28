@@ -3,6 +3,7 @@ class HobbiesController {
     constructor(type) {
         this.type = this.getHobbyType()['type']
         this.greet()
+        this.renderBody()
     }
 
     getHobbyType = () => {
@@ -23,7 +24,22 @@ class HobbiesController {
     }
 
     greet() {
-        document.getElementById('heading-anchor').innerText = `Hello you are at ${this.resolveDisplayName(this.type)}`
+        document.getElementById('heading-anchor').innerHTML = `Hallo, Sie sind bei <code style="color: var(--primary);">${this.resolveDisplayName(this.type)}</code>`
+    }
+
+    renderBody() {
+        var content
+        switch (this.type) {
+            case "mtb":
+                content = `<img src="${this.getImageUrl(this.type)}" class="image-full" />`
+                break;
+
+            default:
+                content = `<iframe src="${this.getImageUrl(this.type)}" width="100%" height="600px"></iframe>`
+                break;
+        }
+        document.getElementById('content-anchor').innerHTML = content
+
     }
 
     resolveDisplayName(type) {
